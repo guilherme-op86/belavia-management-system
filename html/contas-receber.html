@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belavia contas a receber</title>
+
+    <link rel="stylesheet" href="/css/contas-receber.css">
 </head>
 <body>
     <header class="mainTitle">Contas a Receber</header>
 
     <section class="dataSelection">
-        <p>Adicionar recebimento</p>
+        <p class="dataTitle">Adicionar recebimento</p>
 
         <div class="dataType">
 
             <div class="data">
                 <p>Cliente:</p>
-                <input type="text" placeholder="Nome do cliente" required>
+                <input type="text" placeholder="Nome do cliente" id="client" required>
             </div>
 
             <div class="data">
                 <p>Serviço:</p>
-                <input type="text" placeholder="Descrição do serviço" required>
+                <input type="text" placeholder="Descrição do serviço" id="service" required>
             </div>
 
             <div class="data">
@@ -30,7 +32,7 @@
 
             <div class="data">
                 <p>Data:</p>
-                <input type="date" required>
+                <input type="date" id="date" required>
             </div>
 
             <div class="data">
@@ -70,14 +72,19 @@
     </div>
 
     <table>
-        <tr>
-            <th>Cliente</th>
-            <th>Serviço</th>
-            <th>Valor</th>
-            <th>Data</th>
-            <th>Status</th>
-            <th>Ações</th>
-        </tr>
+
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Serviço</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+ 
+        <tbody></tbody>
     </table>
 </body>
 </html>

@@ -1,0 +1,78 @@
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #ccc;
+    padding: 5rem;
+
+}
+
+.mainTitle{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.dataSelection{
+    max-width: 70vw;
+    border: .5px solid white;
+    margin: auto;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin-top: 2rem;
+
+}
+
+.dataTitle{
+    padding: 1em;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.dataTitle::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: black;
+    opacity: .3;
+    margin-top: .5em;   
+}
+
+.dataType{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    padding: 3rem;
+}
+
+.data p{
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-bottom: .5em;
+}
+
+#addButton{
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+    min-width: 10em;
+    padding: .8em;
+    background-color: rgb(65, 169, 65);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border-radius: 1rem ;
+}
