@@ -23,7 +23,7 @@ body{
 }
 
 .dataSelection{
-    max-width: 70vw;
+    max-width: 80vw;
     border: .5px solid white;
     margin: auto;
     gap: 2rem;
@@ -31,7 +31,6 @@ body{
     background-color: white;
     border-radius: 1rem;
     margin-top: 2rem;
-
 }
 
 .dataTitle{
@@ -46,7 +45,7 @@ body{
     width: 100%;
     display: block;
     background-color: black;
-    opacity: .3;
+    opacity: .2;
     margin-top: .5em;   
 }
 
@@ -65,6 +64,14 @@ body{
     margin-bottom: .5em;
 }
 
+input{
+    padding: .8em;
+}
+
+#status{
+    padding: .8em;
+}
+
 #addButton{
     display: block;
     margin: auto;
@@ -76,3 +83,40 @@ body{
     font-weight: bolder;
     border-radius: 1rem ;
 }
+
+.buttons{
+    margin-top: 3rem;
+    margin-left: auto;
+    display: flex;
+    max-width: 80vw;
+    margin: auto;
+    margin-top: 3rem;
+    gap: 3rem;
+}
+
+.button{
+    padding: .5em;
+    width: 10rem;
+    border-radius: 5px;
+}
+
+#monthFilter{
+    border-radius: 5px;
+    padding: .5em;
+    width: 10em;
+}
+
+#clientTable{
+    margin: auto;
+    margin-top: 8rem;
+    max-width: 80vw;
+    border: 2px solid darkgreen;
+    width: 100%;
+
+}
+
+#tableHeader th{
+    font-size: 1.6rem;
+    text-align: left;
+}
+
