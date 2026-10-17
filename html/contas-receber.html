@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belavia contas a receber</title>
+</head>
+<body>
+    <header class="mainTitle">Contas a Receber</header>
+
+    <section class="dataSelection">
+        <p>Adicionar recebimento</p>
+
+        <div class="dataType">
+
+            <div class="data">
+                <p>Cliente:</p>
+                <input type="text" placeholder="Nome do cliente" required>
+            </div>
+
+            <div class="data">
+                <p>Serviço:</p>
+                <input type="text" placeholder="Descrição do serviço" required>
+            </div>
+
+            <div class="data">
+                <p>Valor:</p>
+                <input type="text" placeholder="R$ 0,00" required id="value">
+            </div>
+
+            <div class="data">
+                <p>Data:</p>
+                <input type="date" required>
+            </div>
+
+            <div class="data">
+                <p>Status:</p>
+                <select name="status" id="status">
+                    <option value="pendente">Pendente</option>
+                    <option value="pago">Pago</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="addButton">Adicionar</button>
+    </section>
+
+    <div class="buttons">
+        <button class="button">Todos</button>
+
+        <button class="button">Pendentes</button>
+
+        <button class="button">Pagos</button>
+
+        <select id="monthFilter">
+            <option value="">Todos os meses</option>
+            <option value="01">Janeiro</option>
+            <option value="02">Fevereiro</option>
+            <option value="03">Março</option>
+            <option value="04">Abril</option>
+            <option value="05">Maio</option>
+            <option value="06">Junho</option>
+            <option value="07">Julho</option>
+            <option value="08">Agosto</option>
+            <option value="09">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+        </select>
+    </div>
+
+    <table>
+        <tr>
+            <th>Cliente</th>
+            <th>Serviço</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </table>
+</body>
+</html>
