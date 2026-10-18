@@ -157,3 +157,19 @@ input{
     color: white;
     font-weight: bold;
 }
+
+.editBtn{
+    padding: 1em;
+    background-color: #ccc;
+    color: black
+    border 1px solid black;
+    border-radius: 5px;
+}
+
+.deleteBtn{
+    padding: 1em;
+    background-color: #ccc;
+    color: black
+    border 1px solid black;
+    border-radius: 5px;
+}

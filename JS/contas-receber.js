@@ -103,3 +103,33 @@ const updateTable = () =>{
      })
 }
 
+const deleteBill = (index) =>{
+    const dataBase = JSON.parse(localStorage.getItem("dataBase"))
+
+    dataBase.splice(index, 1)
+
+    localStorage.setItem("dataBase", JSON.stringify(dataBase))
+
+    updateTable()
+}
+
+const editBill = (index) =>{
+    const clientInput = document.querySelector("#client")
+    const serviceInput = document.querySelector("#service")
+    const valueInput = document.querySelector("#value")
+    const dateInput = document.querySelector("#date")
+    const statusInput = document.querySelector("#status")
+    const addBtn = document.querySelector("#addButton")
+
+    const dataBase = JSON.parse(localStorage.getItem("dataBase"))
+
+    const itemSelected = dataBase[index]
+
+    clientInput = itemSelected.client
+    serviceInput = itemSelected.service
+    valueInput = itemSelected.value
+    dateInput = itemSelected.date
+    statusInput = itemSelected.status
+
+    addBtn.textContent = "Salvar"
+}
