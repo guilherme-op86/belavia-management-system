@@ -81,7 +81,14 @@ input{
     background-color: rgb(65, 169, 65);
     font-size: 1.5rem;
     font-weight: bolder;
-    border-radius: 1rem ;
+    border-radius: 1rem;
+    transform: scale(1);
+    transition: transform .6s ease-out;
+}
+
+#addButton:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .buttons{
@@ -98,6 +105,14 @@ input{
     padding: .5em;
     width: 10rem;
     border-radius: 5px;
+    transform: scale(1);
+    transition: transform .6s ease-out;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    
 }
 
 #monthFilter{
@@ -112,11 +127,22 @@ input{
     max-width: 80vw;
     border: 2px solid darkgreen;
     width: 100%;
+    margin-bottom: 5rem;
 
 }
 
 #tableHeader th{
     font-size: 1.6rem;
     text-align: left;
+}
+
+#valuesContainer{
+    border: 2px solid red;
+    display: flex;
+    max-width: 80vw;
+    margin: auto;
+    padding: 2rem;
+    justify-content: space-around;
+
 }
 
