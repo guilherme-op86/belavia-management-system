@@ -23,7 +23,7 @@ body{
 }
 
 .dataSelection{
-    max-width: 80vw;
+    max-width: 90vw;
     border: .5px solid white;
     margin: auto;
     gap: 2rem;
@@ -95,7 +95,7 @@ input{
     margin-top: 3rem;
     margin-left: auto;
     display: flex;
-    max-width: 80vw;
+    max-width: 90vw;
     margin: auto;
     margin-top: 3rem;
     gap: 3rem;
@@ -124,7 +124,7 @@ input{
 #clientTable{
     margin: auto;
     margin-top: 8rem;
-    max-width: 80vw;
+    max-width: 90vw;
     border: 2px solid darkgreen;
     width: 100%;
     margin-bottom: 5rem;
@@ -139,10 +139,21 @@ input{
 #valuesContainer{
     border: 2px solid red;
     display: flex;
-    max-width: 80vw;
+    max-width: 90vw;
     margin: auto;
     padding: 2rem;
     justify-content: space-around;
 
 }
 
+.status-paid {
+    background-color: #4CAF50; 
+    color: white;
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #E53935; 
+    color: white;
+    font-weight: bold;
+}
