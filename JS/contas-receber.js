@@ -17,10 +17,25 @@ const addBill = () =>{
         status: status
     }
 
-    dataBase.push(newObject)
+    if(edittingIndex != null){
+        dataBase.splice(edittingIndex, 1, newObject)
+        edittingIndex = null
+        document.querySelector("#addButton").textContent = "Adicionar"
+
+    }else{
+        dataBase.push(newObject)
+    }
+
 
     localStorage.setItem("dataBase", JSON.stringify(dataBase))
 
+    updateTable()
+
+    document.querySelector("#client").value = ""
+    document.querySelector("#service").value = ""
+    document.querySelector("#value").value = ""
+    document.querySelector("#date").value = ""
+    document.querySelector("#status").value = ""
 }
 
 const currancyNumber = (stringValue) =>{
@@ -29,7 +44,8 @@ const currancyNumber = (stringValue) =>{
 
     stringValue = stringValue.replace(",", ".")
 
-    return parseFloat(stringValue)
+    const number = parseFloat(stringValue)
+    return isNaN(number) ? 0 : number
 }
 
 const valueToCurrency = (valueNumber) =>{
@@ -113,6 +129,8 @@ const deleteBill = (index) =>{
     updateTable()
 }
 
+let edittingIndex
+
 const editBill = (index) =>{
     const clientInput = document.querySelector("#client")
     const serviceInput = document.querySelector("#service")
@@ -125,11 +143,21 @@ const editBill = (index) =>{
 
     const itemSelected = dataBase[index]
 
-    clientInput = itemSelected.client
-    serviceInput = itemSelected.service
-    valueInput = itemSelected.value
-    dateInput = itemSelected.date
-    statusInput = itemSelected.status
+    clientInput.value = itemSelected.client
+    serviceInput.value = itemSelected.service
+    valueInput.value = itemSelected.value
+    dateInput.value = itemSelected.date
+    statusInput.value = itemSelected.status
 
     addBtn.textContent = "Salvar"
+
+    edittingIndex = index
 }
+
+document.querySelector("#addButton").addEventListener("click", () =>{
+    addBill()
+})
+
+window.addEventListener("load", () =>{
+    updateTable()
+})
