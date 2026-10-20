@@ -125,15 +125,23 @@ input{
     margin: auto;
     margin-top: 8rem;
     max-width: 90vw;
-    border: 2px solid darkgreen;
+    background-color: rgb(253, 253, 253);
     width: 100%;
     margin-bottom: 5rem;
+    border-spacing: 10rem 3rem;
+    border-collapse: separate;
+    border-radius: 1rem;
+}
 
+#clientTable td{
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: 5px;
 }
 
 #tableHeader th{
     font-size: 1.6rem;
-    text-align: left;
+    text-align: center;
 }
 
 #valuesContainer{
@@ -150,26 +158,33 @@ input{
     background-color: #4CAF50; 
     color: white;
     font-weight: bold;
+    text-align: center;
 }
 
 .status-pending {
     background-color: #E53935; 
     color: white;
     font-weight: bold;
+    text-align: center;
 }
 
 .editBtn{
     padding: 1em;
     background-color: #ccc;
-    color: black
-    border 1px solid black;
+    color: black;
+    font-weight: bolder;
     border-radius: 5px;
+    width: 10rem;
+    margin-right: 1rem;
+    border: 2px solid black;
 }
 
 .deleteBtn{
     padding: 1em;
     background-color: #ccc;
-    color: black
-    border 1px solid black;
+    color: black;
+    font-weight: bolder;
     border-radius: 5px;
+    width: 10rem;
+    border: 2px solid black;
 }

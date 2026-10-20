@@ -7,6 +7,11 @@ const addBill = () =>{
     const date = document.querySelector("#date").value
     const status = document.querySelector("#status").value
 
+    if(!client || !service || !value || !date || !status){
+        alert("Todos os campos para cadastro precisam estar preenchidos")
+        return
+    }
+
     const numericValue = currancyNumber(value)
 
     const newObject = {
@@ -45,7 +50,7 @@ const currancyNumber = (stringValue) =>{
     stringValue = stringValue.replace(",", ".")
 
     const number = parseFloat(stringValue)
-    return isNaN(number) ? 0 : number
+    return isNaN(number) ? 0 : number 
 }
 
 const valueToCurrency = (valueNumber) =>{
@@ -100,14 +105,14 @@ const updateTable = () =>{
         editButton.textContent = "Editar"
         editButton.classList.add("editBtn")
         editButton.addEventListener("click", () =>{
-            editBill(index)
+            editBill(index) //closure
         })
 
         const deleteBtn = document.createElement("button")
         deleteBtn.textContent = "Deletar"
         deleteBtn.classList.add("deleteBtn")
         deleteBtn.addEventListener("click", () =>{
-            deleteBill(index)
+            deleteBill(index) //closure
         })
 
         actionCell.appendChild(editButton)
