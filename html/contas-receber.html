@@ -16,27 +16,27 @@
         <div class="dataType">
 
             <div class="data">
-                <p>Cliente:</p>
-                <input type="text" placeholder="Nome do cliente" id="client" required>
+                <label for="client">Cliente: </label>
+                <input type="text" placeholder="Nome do cliente" id="client">
             </div>
 
             <div class="data">
-                <p>Serviço:</p>
-                <input type="text" placeholder="Descrição do serviço" id="service" required>
+                <label for="service">Serviço: </label>
+                <input type="text" placeholder="Descrição do serviço" id="service">
             </div>
 
             <div class="data">
-                <p>Valor:</p>
-                <input type="text" placeholder="R$ 0,00" required id="value">
+                <label for="value">Valor: </label>
+                <input type="text" placeholder="R$ 0,00" id="value">
             </div>
 
             <div class="data">
-                <p>Data:</p>
-                <input type="date" id="date" required>
+                <label for="date">Data: </label>
+                <input type="date" id="date">
             </div>
 
             <div class="data">
-                <p>Status:</p>
+                <label for="status">Status: </label>
                 <select name="status" id="status">
                     <option value="pending">Pendente</option>
                     <option value="paid">Pago</option>
@@ -48,7 +48,7 @@
     </section>
 
     <div class="buttons">
-        <button class="button">Todos</button>
+        <button class="button allButton">Todos</button>
 
         <button class="button">Pendentes</button>
 

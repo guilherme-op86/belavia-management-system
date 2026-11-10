@@ -163,6 +163,6 @@ document.querySelector("#addButton").addEventListener("click", () =>{
     addBill()
 })
 
-window.addEventListener("load", () =>{
+document.querySelector(".allButton").addEventListener("click", () =>{
     updateTable()
 })

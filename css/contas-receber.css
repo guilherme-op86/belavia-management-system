@@ -58,7 +58,7 @@ body{
     padding: 3rem;
 }
 
-.data p{
+.data label{
     font-size: 1.5em;
     font-weight: bolder;
     margin-bottom: .5em;
